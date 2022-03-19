@@ -6,13 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <es.avifer.listheaderseemore.ListHeaderSeeMore
+        android:id="@+id/activity_main__list_header_see_more__list"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:colorTextHeader="@color/teal_700"
+        app:colorTextSeeMore="@color/teal_700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:marginHorizontalTextHeader="@dimen/activity_main__list_header_see_more__list__margin_text_header"
+        app:marginHorizontalTextSeeMore="@dimen/activity_main__list_header_see_more__list__margin_text_see_more"
+        app:marginVerticalList="@dimen/activity_main__list_header_see_more__list__margin_list"
+        app:marginVerticalTextHeader="@dimen/activity_main__list_header_see_more__list__margin_text_header"
+        app:marginVerticalTextSeeMore="@dimen/activity_main__list_header_see_more__list__margin_text_see_more"
+        app:sizeTextHeader="@dimen/activity_main__list_header_see_more__list__size_text_header"
+        app:sizeTextSeeMore="@dimen/activity_main__list_header_see_more__list__size_test_see_more"
+        app:textHeader="@string/activity_main__list_header_see_more__list__text_header"
+        app:textSeeMore="@string/activity_main__list_header_see_more__list__text_see_more" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
