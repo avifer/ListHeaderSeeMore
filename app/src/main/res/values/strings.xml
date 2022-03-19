@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">ListHeaderSeeMore</string>
+    <string name="app_name">App ListHeaderSeeMore</string>
+
+    <string name="activity_main__list_header_see_more__list__text_header">Category</string>
+    <string name="activity_main__list_header_see_more__list__text_see_more">See more</string>
 </resources>

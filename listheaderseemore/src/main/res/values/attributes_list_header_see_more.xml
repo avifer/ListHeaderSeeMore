@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ListHeaderSeeMore">
+        <!--VIEW-->
+        <attr name="backgroundColor" format="color" />
+        <!--TEXT HEADER-->
+        <attr name="textHeader" format="string" />
+        <attr name="colorTextHeader" format="color" />
+        <attr name="sizeTextHeader" format="dimension" />
+        <attr name="maxLinesTextHeader" format="integer" />
+        <attr name="paddingHorizontalTextHeader" format="dimension" />
+        <attr name="paddingVerticalTextHeader" format="dimension" />
+        <attr name="marginHorizontalTextHeader" format="dimension" />
+        <attr name="marginVerticalTextHeader" format="dimension" />
+        <!--TEXT SEE MORE-->
+        <attr name="textSeeMore" format="string" />
+        <attr name="colorTextSeeMore" format="color" />
+        <attr name="sizeTextSeeMore" format="dimension" />
+        <attr name="maxLinesTextSeeMore" format="integer" />
+        <attr name="paddingHorizontalTextSeeMore" format="dimension" />
+        <attr name="paddingVerticalTextSeeMore" format="dimension" />
+        <attr name="marginHorizontalTextSeeMore" format="dimension" />
+        <attr name="marginVerticalTextSeeMore" format="dimension" />
+        <!--LIST-->
+        <attr name="paddingHorizontalList" format="dimension" />
+        <attr name="paddingVerticalList" format="dimension" />
+        <attr name="marginHorizontalList" format="dimension" />
+        <attr name="marginVerticalList" format="dimension" />
+    </declare-styleable>
+</resources>
