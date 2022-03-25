@@ -8,8 +8,10 @@
         <attr name="colorTextHeader" format="color" />
         <attr name="sizeTextHeader" format="dimension" />
         <attr name="maxLinesTextHeader" format="integer" />
+        <attr name="paddingTextHeader" format="dimension" />
         <attr name="paddingHorizontalTextHeader" format="dimension" />
         <attr name="paddingVerticalTextHeader" format="dimension" />
+        <attr name="marginTextHeader" format="dimension" />
         <attr name="marginHorizontalTextHeader" format="dimension" />
         <attr name="marginVerticalTextHeader" format="dimension" />
         <!--TEXT SEE MORE-->
@@ -17,13 +19,17 @@
         <attr name="colorTextSeeMore" format="color" />
         <attr name="sizeTextSeeMore" format="dimension" />
         <attr name="maxLinesTextSeeMore" format="integer" />
+        <attr name="paddingTextSeeMore" format="dimension" />
         <attr name="paddingHorizontalTextSeeMore" format="dimension" />
         <attr name="paddingVerticalTextSeeMore" format="dimension" />
+        <attr name="marginTextSeeMore" format="dimension" />
         <attr name="marginHorizontalTextSeeMore" format="dimension" />
         <attr name="marginVerticalTextSeeMore" format="dimension" />
         <!--LIST-->
+        <attr name="paddingList" format="dimension" />
         <attr name="paddingHorizontalList" format="dimension" />
         <attr name="paddingVerticalList" format="dimension" />
+        <attr name="marginList" format="dimension" />
         <attr name="marginHorizontalList" format="dimension" />
         <attr name="marginVerticalList" format="dimension" />
     </declare-styleable>

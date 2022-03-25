@@ -27,24 +27,30 @@ class ListHeaderSeeMore(context: Context, attributeSet: AttributeSet) :
         private var DEFAULT_COLOR_TEXT_HEADER = R.color.black
         private var DEFAULT_SIZE_TEXT_HEADER = 12
         private var DEFAULT_MAX_LINES_HEADER = 1
-        private var DEFAULT_PADDING_HORIZONTAL_TEXT_HEADER = 0
-        private var DEFAULT_PADDING_VERTICAL_TEXT_HEADER = 0
-        private var DEFAULT_MARGIN_HORIZONTAL_TEXT_HEADER = 0
-        private var DEFAULT_MARGIN_VERTICAL_TEXT_HEADER = 0
+        private var DEFAULT_PADDING_TEXT_HEADER = -999999999
+        private var DEFAULT_PADDING_HORIZONTAL_TEXT_HEADER = -999999999
+        private var DEFAULT_PADDING_VERTICAL_TEXT_HEADER = -999999999
+        private var DEFAULT_MARGIN_TEXT_HEADER = -999999999
+        private var DEFAULT_MARGIN_HORIZONTAL_TEXT_HEADER = -999999999
+        private var DEFAULT_MARGIN_VERTICAL_TEXT_HEADER = -999999999
 
         private var DEFAULT_TEXT_SEE_MORE = ""
         private var DEFAULT_COLOR_TEXT_SEE_MORE = R.color.black
         private var DEFAULT_SIZE_TEXT_SEE_MORE = 12
         private var DEFAULT_MAX_LINES_SEE_MORE = 1
-        private var DEFAULT_PADDING_HORIZONTAL_TEXT_SEE_MORE = 0
-        private var DEFAULT_PADDING_VERTICAL_TEXT_SEE_MORE = 0
-        private var DEFAULT_MARGIN_HORIZONTAL_TEXT_SEE_MORE = 0
-        private var DEFAULT_MARGIN_VERTICAL_TEXT_SEE_MORE = 0
+        private var DEFAULT_PADDING_TEXT_SEE_MORE = -999999999
+        private var DEFAULT_PADDING_HORIZONTAL_TEXT_SEE_MORE = -999999999
+        private var DEFAULT_PADDING_VERTICAL_TEXT_SEE_MORE = -999999999
+        private var DEFAULT_MARGIN_TEXT_SEE_MORE = -999999999
+        private var DEFAULT_MARGIN_HORIZONTAL_TEXT_SEE_MORE = -999999999
+        private var DEFAULT_MARGIN_VERTICAL_TEXT_SEE_MORE = -999999999
 
-        private var DEFAULT_PADDING_HORIZONTAL_LIST_ELEMENTS = 0
-        private var DEFAULT_PADDING_VERTICAL_LIST_ELEMENTS = 0
-        private var DEFAULT_MARGIN_HORIZONTAL_LIST_ELEMENTS = 0
-        private var DEFAULT_MARGIN_VERTICAL_LIST_ELEMENTS = 0
+        private var DEFAULT_PADDING_LIST_ELEMENTS = -999999999
+        private var DEFAULT_PADDING_HORIZONTAL_LIST_ELEMENTS = -999999999
+        private var DEFAULT_PADDING_VERTICAL_LIST_ELEMENTS = -999999999
+        private var DEFAULT_MARGIN_LIST_ELEMENTS = -999999999
+        private var DEFAULT_MARGIN_HORIZONTAL_LIST_ELEMENTS = -999999999
+        private var DEFAULT_MARGIN_VERTICAL_LIST_ELEMENTS = -999999999
     }
 
     //VIEWS
@@ -92,8 +98,10 @@ class ListHeaderSeeMore(context: Context, attributeSet: AttributeSet) :
         initColorTextHeader()
         initSizeTextHeader()
         initMaxLinesTextHeader()
+        initPaddingTextHeader()
         initPaddingHorizontalTextHeader()
         initPaddingVerticalTextHeader()
+        initMarginTextHeader()
         initMarginHorizontalTextHeader()
         initMarginVerticalTextHeader()
     }
@@ -132,40 +140,70 @@ class ListHeaderSeeMore(context: Context, attributeSet: AttributeSet) :
         )
     }
 
+    private fun initPaddingTextHeader() {
+        val paddingTextHeader = this.attributes?.getLayoutDimension(
+            R.styleable.ListHeaderSeeMore_paddingTextHeader,
+            DEFAULT_PADDING_TEXT_HEADER
+        ) ?: DEFAULT_PADDING_TEXT_HEADER
+
+        if (paddingTextHeader != DEFAULT_PADDING_TEXT_HEADER) {
+            setPaddingTextHeader(paddingTextHeader)
+        }
+    }
+
     private fun initPaddingHorizontalTextHeader() {
-        setPaddingHorizontalTextHeader(
-            this.attributes?.getLayoutDimension(
-                R.styleable.ListHeaderSeeMore_paddingHorizontalTextHeader,
-                DEFAULT_PADDING_HORIZONTAL_TEXT_HEADER
-            ) ?: DEFAULT_PADDING_HORIZONTAL_TEXT_HEADER
-        )
+        val paddingHorizontalTextHeader = this.attributes?.getLayoutDimension(
+            R.styleable.ListHeaderSeeMore_paddingHorizontalTextHeader,
+            DEFAULT_PADDING_HORIZONTAL_TEXT_HEADER
+        ) ?: DEFAULT_PADDING_HORIZONTAL_TEXT_HEADER
+
+        if (paddingHorizontalTextHeader != DEFAULT_PADDING_HORIZONTAL_TEXT_HEADER) {
+            setPaddingHorizontalTextHeader(paddingHorizontalTextHeader)
+        }
     }
 
     private fun initPaddingVerticalTextHeader() {
-        setPaddingVerticalTextHeader(
-            this.attributes?.getLayoutDimension(
-                R.styleable.ListHeaderSeeMore_paddingVerticalTextHeader,
-                DEFAULT_PADDING_VERTICAL_TEXT_HEADER
-            ) ?: DEFAULT_PADDING_VERTICAL_TEXT_HEADER
-        )
+        val paddingVerticalTextHeader = this.attributes?.getLayoutDimension(
+            R.styleable.ListHeaderSeeMore_paddingVerticalTextHeader,
+            DEFAULT_PADDING_VERTICAL_TEXT_HEADER
+        ) ?: DEFAULT_PADDING_VERTICAL_TEXT_HEADER
+
+        if (paddingVerticalTextHeader != DEFAULT_PADDING_VERTICAL_TEXT_HEADER) {
+            setPaddingVerticalTextHeader(paddingVerticalTextHeader)
+        }
+    }
+
+    private fun initMarginTextHeader() {
+        val marginTextHeader = this.attributes?.getLayoutDimension(
+            R.styleable.ListHeaderSeeMore_marginTextHeader,
+            DEFAULT_MARGIN_TEXT_HEADER
+        ) ?: DEFAULT_MARGIN_TEXT_HEADER
+
+        if (marginTextHeader != DEFAULT_MARGIN_TEXT_HEADER) {
+            setMarginTextHeader(marginTextHeader)
+        }
     }
 
     private fun initMarginHorizontalTextHeader() {
-        setMarginHorizontalTextHeader(
-            this.attributes?.getLayoutDimension(
-                R.styleable.ListHeaderSeeMore_marginHorizontalTextHeader,
-                DEFAULT_MARGIN_HORIZONTAL_TEXT_HEADER
-            ) ?: DEFAULT_MARGIN_HORIZONTAL_TEXT_HEADER
-        )
+        val marginHorizontalTextHeader = this.attributes?.getLayoutDimension(
+            R.styleable.ListHeaderSeeMore_marginHorizontalTextHeader,
+            DEFAULT_MARGIN_HORIZONTAL_TEXT_HEADER
+        ) ?: DEFAULT_MARGIN_HORIZONTAL_TEXT_HEADER
+
+        if (marginHorizontalTextHeader != DEFAULT_MARGIN_HORIZONTAL_TEXT_HEADER) {
+            setMarginHorizontalTextHeader(marginHorizontalTextHeader)
+        }
     }
 
     private fun initMarginVerticalTextHeader() {
-        setMarginVerticalTextHeader(
-            this.attributes?.getLayoutDimension(
-                R.styleable.ListHeaderSeeMore_marginVerticalTextHeader,
-                DEFAULT_MARGIN_VERTICAL_TEXT_HEADER
-            ) ?: DEFAULT_MARGIN_VERTICAL_TEXT_HEADER
-        )
+        val marginVerticalTextHeader = this.attributes?.getLayoutDimension(
+            R.styleable.ListHeaderSeeMore_marginVerticalTextHeader,
+            DEFAULT_MARGIN_VERTICAL_TEXT_HEADER
+        ) ?: DEFAULT_MARGIN_VERTICAL_TEXT_HEADER
+
+        if (marginVerticalTextHeader != DEFAULT_MARGIN_VERTICAL_TEXT_HEADER) {
+            setMarginVerticalTextHeader(marginVerticalTextHeader)
+        }
     }
 
     //endregion
@@ -178,8 +216,10 @@ class ListHeaderSeeMore(context: Context, attributeSet: AttributeSet) :
         initColorTextSeeMore()
         initSizeTextSeeMore()
         initMaxLinesTextSeeMore()
+        initPaddingTextSeeMore()
         initPaddingHorizontalTextSeeMore()
         initPaddingVerticalTextSeeMore()
+        initMarginTextSeeMore()
         initMarginHorizontalTextSeeMore()
         initMarginVerticalTextSeeMore()
     }
@@ -218,40 +258,70 @@ class ListHeaderSeeMore(context: Context, attributeSet: AttributeSet) :
         )
     }
 
+    private fun initPaddingTextSeeMore() {
+        val paddingTextSeeMore = this.attributes?.getLayoutDimension(
+            R.styleable.ListHeaderSeeMore_paddingTextSeeMore,
+            DEFAULT_PADDING_TEXT_SEE_MORE
+        ) ?: DEFAULT_PADDING_TEXT_SEE_MORE
+
+        if (paddingTextSeeMore != DEFAULT_PADDING_TEXT_SEE_MORE) {
+            setPaddingTextSeeMore(paddingTextSeeMore)
+        }
+    }
+
     private fun initPaddingHorizontalTextSeeMore() {
-        setPaddingHorizontalTextSeeMore(
-            this.attributes?.getLayoutDimension(
-                R.styleable.ListHeaderSeeMore_paddingHorizontalTextSeeMore,
-                DEFAULT_PADDING_HORIZONTAL_TEXT_SEE_MORE
-            ) ?: DEFAULT_PADDING_HORIZONTAL_TEXT_SEE_MORE
-        )
+        val paddingHorizontalTextSeeMore = this.attributes?.getLayoutDimension(
+            R.styleable.ListHeaderSeeMore_paddingHorizontalTextSeeMore,
+            DEFAULT_PADDING_HORIZONTAL_TEXT_SEE_MORE
+        ) ?: DEFAULT_PADDING_HORIZONTAL_TEXT_SEE_MORE
+
+        if (paddingHorizontalTextSeeMore != DEFAULT_PADDING_HORIZONTAL_TEXT_SEE_MORE) {
+            setPaddingHorizontalTextSeeMore(paddingHorizontalTextSeeMore)
+        }
     }
 
     private fun initPaddingVerticalTextSeeMore() {
-        setPaddingVerticalTextSeeMore(
-            this.attributes?.getLayoutDimension(
-                R.styleable.ListHeaderSeeMore_paddingVerticalTextSeeMore,
-                DEFAULT_PADDING_VERTICAL_TEXT_SEE_MORE
-            ) ?: DEFAULT_PADDING_VERTICAL_TEXT_SEE_MORE
-        )
+        val paddingVerticalTextSeeMore = this.attributes?.getLayoutDimension(
+            R.styleable.ListHeaderSeeMore_paddingVerticalTextSeeMore,
+            DEFAULT_PADDING_VERTICAL_TEXT_SEE_MORE
+        ) ?: DEFAULT_PADDING_VERTICAL_TEXT_SEE_MORE
+
+        if (paddingVerticalTextSeeMore != DEFAULT_PADDING_VERTICAL_TEXT_SEE_MORE) {
+            setPaddingVerticalTextSeeMore(paddingVerticalTextSeeMore)
+        }
+    }
+
+    private fun initMarginTextSeeMore() {
+        val marginTextSeeMore = this.attributes?.getLayoutDimension(
+            R.styleable.ListHeaderSeeMore_marginTextSeeMore,
+            DEFAULT_MARGIN_TEXT_SEE_MORE
+        ) ?: DEFAULT_MARGIN_TEXT_SEE_MORE
+
+        if (marginTextSeeMore != DEFAULT_MARGIN_TEXT_SEE_MORE) {
+            setMarginTextSeeMore(marginTextSeeMore)
+        }
     }
 
     private fun initMarginHorizontalTextSeeMore() {
-        setMarginHorizontalTextSeeMore(
-            this.attributes?.getLayoutDimension(
-                R.styleable.ListHeaderSeeMore_marginHorizontalTextSeeMore,
-                DEFAULT_MARGIN_HORIZONTAL_TEXT_SEE_MORE
-            ) ?: DEFAULT_MARGIN_HORIZONTAL_TEXT_SEE_MORE
-        )
+        val marginHorizontalTextSeeMore = this.attributes?.getLayoutDimension(
+            R.styleable.ListHeaderSeeMore_marginHorizontalTextSeeMore,
+            DEFAULT_MARGIN_HORIZONTAL_TEXT_SEE_MORE
+        ) ?: DEFAULT_MARGIN_HORIZONTAL_TEXT_SEE_MORE
+
+        if (marginHorizontalTextSeeMore != DEFAULT_MARGIN_HORIZONTAL_TEXT_SEE_MORE) {
+            setMarginHorizontalTextSeeMore(marginHorizontalTextSeeMore)
+        }
     }
 
     private fun initMarginVerticalTextSeeMore() {
-        setMarginVerticalTextSeeMore(
-            this.attributes?.getLayoutDimension(
-                R.styleable.ListHeaderSeeMore_marginVerticalTextSeeMore,
-                DEFAULT_MARGIN_VERTICAL_TEXT_SEE_MORE
-            ) ?: DEFAULT_MARGIN_VERTICAL_TEXT_SEE_MORE
-        )
+        val marginVerticalTextSeeMore = this.attributes?.getLayoutDimension(
+            R.styleable.ListHeaderSeeMore_marginVerticalTextSeeMore,
+            DEFAULT_MARGIN_VERTICAL_TEXT_SEE_MORE
+        ) ?: DEFAULT_MARGIN_VERTICAL_TEXT_SEE_MORE
+
+        if (marginVerticalTextSeeMore != DEFAULT_MARGIN_VERTICAL_TEXT_SEE_MORE) {
+            setMarginVerticalTextSeeMore(marginVerticalTextSeeMore)
+        }
     }
 
     //endregion
@@ -261,8 +331,10 @@ class ListHeaderSeeMore(context: Context, attributeSet: AttributeSet) :
     private fun initListElements() {
         listElements = findViewById(R.id.view__list_header_see_more__list__elements)
         initLayoutManagerList()
+        initPaddingListElements()
         initPaddingHorizontalListElements()
         initPaddingVerticalListElements()
+        initMarginListElements()
         initMarginHorizontalListElements()
         initMarginVerticalListElements()
     }
@@ -278,40 +350,70 @@ class ListHeaderSeeMore(context: Context, attributeSet: AttributeSet) :
         }
     }
 
+    private fun initPaddingListElements() {
+        val paddingListElements = this.attributes?.getLayoutDimension(
+            R.styleable.ListHeaderSeeMore_paddingList,
+            DEFAULT_PADDING_LIST_ELEMENTS
+        ) ?: DEFAULT_PADDING_LIST_ELEMENTS
+
+        if (paddingListElements != DEFAULT_PADDING_LIST_ELEMENTS) {
+            setPaddingListElements(paddingListElements)
+        }
+    }
+
     private fun initPaddingHorizontalListElements() {
-        setPaddingHorizontalListElements(
-            this.attributes?.getLayoutDimension(
-                R.styleable.ListHeaderSeeMore_paddingHorizontalList,
-                DEFAULT_PADDING_HORIZONTAL_LIST_ELEMENTS
-            ) ?: DEFAULT_PADDING_HORIZONTAL_LIST_ELEMENTS
-        )
+        val paddingHorizontalListElements = this.attributes?.getLayoutDimension(
+            R.styleable.ListHeaderSeeMore_paddingHorizontalList,
+            DEFAULT_PADDING_HORIZONTAL_LIST_ELEMENTS
+        ) ?: DEFAULT_PADDING_HORIZONTAL_LIST_ELEMENTS
+
+        if (paddingHorizontalListElements != DEFAULT_PADDING_HORIZONTAL_LIST_ELEMENTS) {
+            setPaddingHorizontalListElements(paddingHorizontalListElements)
+        }
     }
 
     private fun initPaddingVerticalListElements() {
-        setPaddingVerticalListElements(
-            this.attributes?.getLayoutDimension(
-                R.styleable.ListHeaderSeeMore_paddingVerticalList,
-                DEFAULT_PADDING_VERTICAL_LIST_ELEMENTS
-            ) ?: DEFAULT_PADDING_VERTICAL_LIST_ELEMENTS
-        )
+        val paddingVerticalListElements = this.attributes?.getLayoutDimension(
+            R.styleable.ListHeaderSeeMore_paddingVerticalList,
+            DEFAULT_PADDING_VERTICAL_LIST_ELEMENTS
+        ) ?: DEFAULT_PADDING_VERTICAL_LIST_ELEMENTS
+
+        if (paddingVerticalListElements != DEFAULT_PADDING_VERTICAL_LIST_ELEMENTS) {
+            setPaddingVerticalListElements(paddingVerticalListElements)
+        }
+    }
+
+    private fun initMarginListElements() {
+        val marginListElements = this.attributes?.getLayoutDimension(
+            R.styleable.ListHeaderSeeMore_marginList,
+            DEFAULT_MARGIN_LIST_ELEMENTS
+        ) ?: DEFAULT_MARGIN_LIST_ELEMENTS
+
+        if (marginListElements != DEFAULT_MARGIN_LIST_ELEMENTS) {
+            setMarginListElements(marginListElements)
+        }
     }
 
     private fun initMarginHorizontalListElements() {
-        setMarginHorizontalListElements(
-            this.attributes?.getLayoutDimension(
-                R.styleable.ListHeaderSeeMore_marginHorizontalList,
-                DEFAULT_MARGIN_HORIZONTAL_LIST_ELEMENTS
-            ) ?: DEFAULT_MARGIN_HORIZONTAL_LIST_ELEMENTS
-        )
+        val marginHorizontalListElements = this.attributes?.getLayoutDimension(
+            R.styleable.ListHeaderSeeMore_marginHorizontalList,
+            DEFAULT_MARGIN_HORIZONTAL_LIST_ELEMENTS
+        ) ?: DEFAULT_MARGIN_HORIZONTAL_LIST_ELEMENTS
+
+        if (marginHorizontalListElements != DEFAULT_MARGIN_HORIZONTAL_LIST_ELEMENTS) {
+            setMarginHorizontalListElements(marginHorizontalListElements)
+        }
     }
 
     private fun initMarginVerticalListElements() {
-        setMarginVerticalListElements(
-            this.attributes?.getLayoutDimension(
-                R.styleable.ListHeaderSeeMore_marginVerticalList,
-                DEFAULT_MARGIN_VERTICAL_LIST_ELEMENTS
-            ) ?: DEFAULT_MARGIN_VERTICAL_LIST_ELEMENTS
-        )
+        val marginVerticalListElements = this.attributes?.getLayoutDimension(
+            R.styleable.ListHeaderSeeMore_marginVerticalList,
+            DEFAULT_MARGIN_VERTICAL_LIST_ELEMENTS
+        ) ?: DEFAULT_MARGIN_VERTICAL_LIST_ELEMENTS
+
+        if (marginVerticalListElements != DEFAULT_MARGIN_VERTICAL_LIST_ELEMENTS) {
+            setMarginVerticalListElements(marginVerticalListElements)
+        }
     }
 
     //endregion
@@ -342,6 +444,15 @@ class ListHeaderSeeMore(context: Context, attributeSet: AttributeSet) :
         headerLabel?.maxLines = maxLines
     }
 
+    fun setPaddingTextHeader(padding: Int) {
+        headerLabel?.setPadding(
+            padding,
+            padding,
+            padding,
+            padding
+        )
+    }
+
     fun setPaddingHorizontalTextHeader(paddingHorizontal: Int) {
         val paddingTop = headerLabel?.paddingTop ?: 0
         val paddingBottom = headerLabel?.paddingBottom ?: 0
@@ -363,6 +474,15 @@ class ListHeaderSeeMore(context: Context, attributeSet: AttributeSet) :
             paddingVertical,
             paddingEnd,
             paddingVertical
+        )
+    }
+
+    fun setMarginTextHeader(margin: Int) {
+        (headerLabel?.layoutParams as? MarginLayoutParams)?.setMargins(
+            margin,
+            margin,
+            margin,
+            margin
         )
     }
 
@@ -410,6 +530,15 @@ class ListHeaderSeeMore(context: Context, attributeSet: AttributeSet) :
         seeMoreLabel?.maxLines = maxLines
     }
 
+    fun setPaddingTextSeeMore(padding: Int) {
+        seeMoreLabel?.setPadding(
+            padding,
+            padding,
+            padding,
+            padding
+        )
+    }
+
     fun setPaddingHorizontalTextSeeMore(paddingHorizontal: Int) {
         val paddingTop = seeMoreLabel?.paddingTop ?: 0
         val paddingBottom = seeMoreLabel?.paddingBottom ?: 0
@@ -431,6 +560,15 @@ class ListHeaderSeeMore(context: Context, attributeSet: AttributeSet) :
             paddingVertical,
             paddingEnd,
             paddingVertical
+        )
+    }
+
+    fun setMarginTextSeeMore(margin: Int) {
+        (seeMoreLabel?.layoutParams as? MarginLayoutParams)?.setMargins(
+            margin,
+            margin,
+            margin,
+            margin
         )
     }
 
@@ -470,6 +608,15 @@ class ListHeaderSeeMore(context: Context, attributeSet: AttributeSet) :
         listElements?.adapter = adapterList
     }
 
+    fun setPaddingListElements(padding: Int) {
+        listElements?.setPadding(
+            padding,
+            padding,
+            padding,
+            padding
+        )
+    }
+
     fun setPaddingHorizontalListElements(paddingHorizontal: Int) {
         val paddingTop = listElements?.paddingTop ?: 0
         val paddingBottom = listElements?.paddingBottom ?: 0
@@ -491,6 +638,15 @@ class ListHeaderSeeMore(context: Context, attributeSet: AttributeSet) :
             paddingVertical,
             paddingEnd,
             paddingVertical
+        )
+    }
+
+    fun setMarginListElements(margin: Int) {
+        (listElements?.layoutParams as? MarginLayoutParams)?.setMargins(
+            margin,
+            margin,
+            margin,
+            margin
         )
     }
 
