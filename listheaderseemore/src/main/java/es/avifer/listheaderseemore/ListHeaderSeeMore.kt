@@ -3,6 +3,7 @@ package es.avifer.listheaderseemore
 import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
+import android.util.TypedValue
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
@@ -115,7 +116,7 @@ class ListHeaderSeeMore(context: Context, attributeSet: AttributeSet) :
 
     private fun initSizeTextHeader() {
         setSizeTextHeader(
-            this.attributes?.getLayoutDimension(
+            this.attributes?.getDimensionPixelSize(
                 R.styleable.ListHeaderSeeMore_sizeTextHeader,
                 DEFAULT_SIZE_TEXT_HEADER
             ) ?: DEFAULT_SIZE_TEXT_HEADER
@@ -201,7 +202,7 @@ class ListHeaderSeeMore(context: Context, attributeSet: AttributeSet) :
 
     private fun initSizeTextSeeMore() {
         setSizeTextSeeMore(
-            this.attributes?.getLayoutDimension(
+            this.attributes?.getDimensionPixelSize(
                 R.styleable.ListHeaderSeeMore_sizeTextSeeMore,
                 DEFAULT_SIZE_TEXT_SEE_MORE
             ) ?: DEFAULT_SIZE_TEXT_SEE_MORE
@@ -334,7 +335,7 @@ class ListHeaderSeeMore(context: Context, attributeSet: AttributeSet) :
     }
 
     fun setSizeTextHeader(size: Int) {
-        headerLabel?.textSize = size.toFloat()
+        headerLabel?.setTextSize(TypedValue.COMPLEX_UNIT_PX, size.toFloat())
     }
 
     fun setMaxLinesTextHeader(maxLines: Int) {
@@ -402,7 +403,7 @@ class ListHeaderSeeMore(context: Context, attributeSet: AttributeSet) :
     }
 
     fun setSizeTextSeeMore(size: Int) {
-        seeMoreLabel?.textSize = size.toFloat()
+        seeMoreLabel?.setTextSize(TypedValue.COMPLEX_UNIT_PX, size.toFloat())
     }
 
     fun setMaxLinesTextSeeMore(maxLines: Int) {

@@ -3,8 +3,8 @@
     <dimen name="activity_main__list_header_see_more__list__margin_text_header">12dp</dimen>
     <dimen name="activity_main__list_header_see_more__list__margin_text_see_more">12dp</dimen>
     <dimen name="activity_main__list_header_see_more__list__margin_list">12dp</dimen>
-    <dimen name="activity_main__list_header_see_more__list__size_text_header">8sp</dimen>
-    <dimen name="activity_main__list_header_see_more__list__size_test_see_more">6sp</dimen>
+    <dimen name="activity_main__list_header_see_more__list__size_text_header">24sp</dimen>
+    <dimen name="activity_main__list_header_see_more__list__size_test_see_more">18sp</dimen>
 
     <dimen name="row__example__parent__size">150dp</dimen>
     <dimen name="row__example__parent__margin">12dp</dimen>

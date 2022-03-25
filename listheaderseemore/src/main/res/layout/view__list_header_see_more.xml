@@ -13,7 +13,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_margin="12dp"
-        tools:text="Text header" />
+        tools:text="Text header"
+        tools:textSize="24sp" />
 
     <TextView
         android:id="@+id/view__list_header_see_more__label__see_more"
