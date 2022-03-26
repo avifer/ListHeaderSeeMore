@@ -37,3 +37,17 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                groupId = 'es.avifer'
+                artifactId = 'list-header-see-more'
+                version = '1.1'
+            }
+        }
+    }
+}
